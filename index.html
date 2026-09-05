@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
     <title>Animation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 300vh;
+            background-color: #000000;
+            overflow-x: hidden;
+            font-family: sans-serif;
+            color: rgb(255, 255, 255);
+        }
+
+        #canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* width: 100vw;
+            height: 100vh; */
+        }
+    </style>
+
 </head>
-<body>
-    <canvas id="animationCanvas" width="800" height="600"></canvas>
+
+<body><canvas id="canvas"></canvas>
+    <script src="script.js"></script>
 </body>
+
 </html>
