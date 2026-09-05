@@ -68,6 +68,15 @@ function snowfall() {
     drawBasket();
     requestAnimationFrame(snowfall);
 }
+
+
+window.addEventListener("keydown", function(e) {
+    if (e.code === "ArrowLeft") {
+        basket.x -= 5;
+    } else if (e.code === "ArrowRight") {
+        basket.x +=5;
+    }
+});
 snowfall();
 
 
