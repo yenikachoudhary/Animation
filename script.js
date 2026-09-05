@@ -72,9 +72,18 @@ function snowfall() {
 
 window.addEventListener("keydown", function(e) {
     if (e.code === "ArrowLeft") {
-        basket.x -= 5;
+        basket.x -= 10;
+        if(basket.x < -40){
+            basket.x= canvas.width;
+            
+        }
+        
     } else if (e.code === "ArrowRight") {
-        basket.x +=5;
+        basket.x +=10;
+        if(basket.x > canvas.width){
+            basket.x = -40;  
+        }
+        
     }
 });
 snowfall();
