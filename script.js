@@ -30,6 +30,24 @@ function drawGround() {
     ctx.fillRect(0,snow, canvas.width,grass - snow);
 }
 
+let basket = {
+    x: canvas.width / 2,
+    y: snow - 50,
+    width: 100,
+    height: 50
+};
+
+function drawBasket() {
+    ctx.fillStyle = "brown";
+
+    ctx.fillRect(
+        basket.x,
+        basket.y,
+        basket.width,
+        basket.height
+    );
+}
+
 function snowfall() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (let i = 0; i < snowflakes.length; i++) {
@@ -47,7 +65,10 @@ function snowfall() {
         ctx.fill()
     }
     drawGround();
+    drawBasket();
     requestAnimationFrame(snowfall);
 }
 snowfall();
+
+
 
